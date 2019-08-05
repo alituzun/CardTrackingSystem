@@ -1,0 +1,151 @@
+﻿<Page x:Class="WpfApplication17.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="900"
+	Title="HomePage">
+    <Page.Resources>
+        <Style x:Key="ListViewStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+        </Style>
+    </Page.Resources>
+
+    <Grid Name="MyGrid">
+        <Label Content="Ad" HorizontalAlignment="Left" Margin="20,71,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Soyad" HorizontalAlignment="Left" Margin="20,133,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Kart No" HorizontalAlignment="Left" Margin="20,164,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.092,-0.46" Width="120"/>
+        <Label Content="İşlem Kodu" HorizontalAlignment="Left" Margin="20,195,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Kurye Kodu" HorizontalAlignment="Left" Margin="20,226,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Ürün Kodu" HorizontalAlignment="Left" Margin="20,257,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Kart Türü" HorizontalAlignment="Left" Margin="20,288,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Kayıt Tarihi" HorizontalAlignment="Left" Margin="20,319,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Teslim Tarihi" HorizontalAlignment="Left" Margin="20,350,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Kurye Verilişi Tarihi" HorizontalAlignment="Left" Margin="20,381,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAd" HorizontalAlignment="Left" Height="23" Margin="145,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <TextBox x:Name="txtSoyad" HorizontalAlignment="Left" Height="23" Margin="145,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <TextBox x:Name="txtKartNo" HorizontalAlignment="Left" Height="23" Margin="145,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" IsUndoEnabled="True" MaxLength="16" />
+        <ComboBox x:Name="cbxİslem" HorizontalAlignment="Left" Margin="145,199,0,0" VerticalAlignment="Top" Width="207">
+            <ComboBoxItem Height="20" Content="1"/>
+            <ComboBoxItem Height="20" Content="7"/>
+            <ComboBoxItem Height="20" Content="100"/>
+            <ComboBoxItem Height="20" Content="139"/>
+            <ComboBoxItem Height="20" Content="140"/>
+            <ComboBoxItem Height="20" Content="220"/>
+            <ComboBoxItem Height="20" Content="401"/>
+            <ComboBoxItem Height="20" Content="501"/>
+            <ComboBoxItem Height="20" Content="550"/>
+            <ComboBoxItem Height="20" Content="631"/>
+        </ComboBox>
+        <ComboBox x:Name="cbxKurye" HorizontalAlignment="Left" Margin="145,230,0,0" VerticalAlignment="Top" Width="207">
+            <ComboBoxItem Height="20" Content="100" />
+            <ComboBoxItem Height="20" Content="555" />
+            <ComboBoxItem Height="20" Content="650" />
+            <ComboBoxItem Height="20" Content="666" />
+            <ComboBoxItem Height="20" Content="999" />
+        </ComboBox>
+        <TextBox x:Name="txtUrunKod" HorizontalAlignment="Left" Height="23" Margin="145,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <ComboBox x:Name="cbxKTipi" HorizontalAlignment="Left" Margin="145,288,0,0" VerticalAlignment="Top" Width="207" >
+            <ComboBoxItem Height="20" Content="A"/>
+            <ComboBoxItem Height="20" Content="E"/>
+        </ComboBox>
+        <DatePicker x:Name="kayitTarih" HorizontalAlignment="Left" Margin="145,319,0,0" VerticalAlignment="Top" Width="207"/>
+        <DatePicker x:Name="teslimTarih" HorizontalAlignment="Left" Margin="145,350,0,0" VerticalAlignment="Top" Width="207"/>
+        <DatePicker x:Name="kuryeTarih" HorizontalAlignment="Left" Margin="145,381,0,0" VerticalAlignment="Top" Width="207"/>
+        <Label Content="Bs Müşteri No" HorizontalAlignment="Left" Margin="382,70,0,0" VerticalAlignment="Top" Height="27" Width="110"/>
+        <Label Content="Vb Müşteri No" HorizontalAlignment="Left" Margin="382,102,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Barkod" HorizontalAlignment="Left" Margin="382,133,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.021,0.334" Width="110"/>
+        <Label Content="Tc Kimlik No" HorizontalAlignment="Left" Margin="382,164,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Şube Kodu" HorizontalAlignment="Left" Margin="382,195,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Ürün Adı" HorizontalAlignment="Left" Margin="382,226,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Bayi Kodu" HorizontalAlignment="Left" Margin="382,257,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="Sözleşmesi Var" HorizontalAlignment="Left" Margin="382,288,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="İkinciAd" HorizontalAlignment="Left" Margin="20,102,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAdiki" HorizontalAlignment="Left" Height="23" Margin="145,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <TextBox x:Name="bsMüsteri" HorizontalAlignment="Left" Height="23" Margin="546,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" MaxLength="7"/>
+        <TextBox x:Name="vbMüsteri" HorizontalAlignment="Left" Height="23" Margin="546,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" MaxLength="12"/>
+        <TextBox x:Name="barkod" HorizontalAlignment="Left" Height="23" Margin="546,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" MaxLength="13"/>
+        <TextBox x:Name="tcNo" HorizontalAlignment="Left" Height="23" Margin="546,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" MaxLength="11"/>
+        <TextBox x:Name="txtSube" HorizontalAlignment="Left" Height="23" Margin="546,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+        <ComboBox x:Name="cbxSube" HorizontalAlignment="Left" Margin="633,198,0,0" VerticalAlignment="Top" Width="120" Height="23">
+            <ComboBoxItem Height="20" Content="0001"/>
+            <ComboBoxItem Height="20" Content="0023"/>
+            <ComboBoxItem Height="20" Content="0432"/>
+            <ComboBoxItem Height="20" Content="0555"/>
+            <ComboBoxItem Height="20" Content="0676"/>
+            <ComboBoxItem Height="20" Content="0834"/>
+            <ComboBoxItem Height="20" Content="0999"/>
+        </ComboBox>
+        <TextBox x:Name="txtUrunAd" HorizontalAlignment="Left" Height="22" Margin="546,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207"/>
+        <TextBox x:Name="txtBayi" HorizontalAlignment="Left" Height="23" Margin="546,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" MaxLength="15"/>
+        <ComboBox x:Name="cbxSozlesme" HorizontalAlignment="Left" Margin="546,288,0,0" VerticalAlignment="Top" Width="207">
+            <ComboBoxItem Height="20" Content="Y/Sözleşmesi var"/>
+            <ComboBoxItem Height="20" Content="N/Sözleşmesi yok"/>
+        </ComboBox>
+        <Label Content="Basım Tarihi" HorizontalAlignment="Left" Margin="382,319,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label Content="İade Tarihi" HorizontalAlignment="Left" Margin="382,350,0,0" VerticalAlignment="Top" Width="110"/>
+        <DatePicker x:Name="basimTarih" HorizontalAlignment="Left" Margin="546,320,0,0" VerticalAlignment="Top" Width="207"/>
+        <DatePicker x:Name="iadeTarih" HorizontalAlignment="Left" Margin="546,350,0,0" VerticalAlignment="Top" Width="207"/>
+        <Button Content="Kaydet" HorizontalAlignment="Left" Margin="65,426,0,0" VerticalAlignment="Top" Width="75" Click="BtnReg_Click"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,71,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,133,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,164,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,195,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,226,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,257,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,288,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,319,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,350,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="0,381,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,71,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,105,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,137,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,168,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,195,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,226,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,257,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,288,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,319,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Label Content="**" HorizontalAlignment="Left" Margin="357,350,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="-0.1,0.077"/>
+        <Button x:Name="btnLstele" Content="Listeleme" HorizontalAlignment="Left" Margin="190,426,0,0" VerticalAlignment="Top" Width="75" Click="btnLstele_Click"/>
+
+        <ComboBox x:Name="aracbx"  HorizontalAlignment="Left" Margin="564,424,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Ad"/>
+            <ComboBoxItem Content="Soyad"/>
+            <ComboBoxItem Content="Vb Müşteri No"/>
+            <ComboBoxItem Content="Kart No"/>
+            <ComboBoxItem Content="TC No"/>
+        </ComboBox>
+        <Label Content="Hangi kategoride arayalım:" HorizontalAlignment="Left" Margin="407,420,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ara" HorizontalAlignment="Left" Margin="716,426,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button x:Name="btnDetayEkle" Content="Detay Ekle" HorizontalAlignment="Left" Margin="302,426,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.733,0.65" Click="btnDetayEkle_Click" />
+        <Button x:Name="btnSqltoexcel" Content="SqlToExcel" HorizontalAlignment="Left" Margin="815,426,0,0" VerticalAlignment="Top" Width="75" Click="btnSqltoexcel_Click"/>
+        <DataGrid x:Name="lstDeneme" HorizontalAlignment="Left" ItemsSource="{Binding}" Margin="20,451,0,57"  HorizontalContentAlignment="Left" Width="900" Focusable="False"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="KartId" Binding="{Binding KartId}" />
+                <DataGridTextColumn Header="AD" Binding="{Binding AD}" />
+                <DataGridTextColumn Header="IKINCIAD" Binding="{Binding IKINCIAD}" />
+                <DataGridTextColumn Header="SOYAD" Binding="{Binding SOYAD}" />
+                <DataGridTextColumn Header="BSMUSTERINO" Binding="{Binding BSMUSTERINO}" />
+                <DataGridTextColumn Header="VBMUSTERINO" Binding="{Binding VBMUSTERINO}" />
+                <DataGridTextColumn Header="KARTNO" Binding="{Binding KARTNO}" />
+                <DataGridTextColumn Header="URUNADI" Binding="{Binding URUNADI}" />
+                <DataGridTextColumn Header="KARTTURU" Binding="{Binding KARTTURU}" />
+                <DataGridTextColumn Header="BARKOD" Binding="{Binding BARKOD}" />
+                <DataGridTextColumn Header="KAYITTARIHI" Binding="{Binding KAYITTARIHI}" />
+                <DataGridTextColumn Header="TESLIMTARIHI" Binding="{Binding TESLIMTARIHI}" />
+                <DataGridTextColumn Header="KURYETARIHI" Binding="{Binding KURYETARIHI}" />
+                <DataGridTextColumn Header="SOZLESMEDURUM" Binding="{Binding SOZLESMEDURUM}" />
+                <DataGridTextColumn Header="BAYIKODU" Binding="{Binding BAYIKODU}" />
+                <DataGridTextColumn Header="SUBEKODU" Binding="{Binding SUBEKODU}" />
+                <DataGridTextColumn Header="TCNO" Binding="{Binding TCNO}" />
+                <DataGridTextColumn Header="ISLEMKODU" Binding="{Binding ISLEMKODU}" />
+                <DataGridTextColumn Header="KURYEKODU" Binding="{Binding KURYEKODU}" />
+                <DataGridTextColumn Header="BASIMTARIHI" Binding="{Binding BASIMTARIHI}" />
+                <DataGridTextColumn Header="IADETARIH" Binding="{Binding IADETARIH}" />
+                <DataGridTextColumn Header="URUNKOD" Binding="{Binding URUNKOD}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
